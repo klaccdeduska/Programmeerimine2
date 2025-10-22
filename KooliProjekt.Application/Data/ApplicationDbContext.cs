@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace KooliProjekt.Application.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+            : base(options)
         {
         }
 
-        public DbSet<ToDoList> ToDoLists { get; set; }
-        public DbSet<ToDoItem> ToDoItems { get; set; }
+        // 🔹 Добавь свои DbSet'ы:
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
     }
 }
